@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+
+
+<style>
+
+body{
+   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+#reveal1, #reveal2, #reveal3 {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+#reveal1.visible,
+#reveal2.visible,
+#reveal3.visible{
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators{
+    filter: invert(50%);
+}
+</style>
+
+<div id="myCarousel home" class="carousel slide" data-bs-ride="carousel"><a href="" id="home"></a>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'img/metrologo.png' %}" class="d-block mx-lg-auto img-fluid" alt="Error Loading Image" width="400" oading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">DINE WITH US!</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit non reiciendis sed vitae. Enim iste libero optio quidem quo?</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="shadow btn btn-warning btn-lg px-5 me-md-2" id="contact-button2">Contact Us!</button>
+        </div>
+      </div>
+    </div>
+</div>
+      </div>
+      <div class="carousel-item">
+       <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'img/metrologo.png' %}" class="d-block mx-lg-auto img-fluid" alt="Error Loading Image" width="400" oading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">DINE WITH US!</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit non reiciendis sed vitae. Enim iste libero optio quidem quo?</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="shadow btn btn-warning btn-lg px-5 me-md-2" id="contact-button3">Contact Us!</button>
+        </div>
+      </div>
+    </div>
+</div>
+      </div>
+      <div class="carousel-item active">
+        <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'img/metrologo.png' %}" class="d-block mx-lg-auto img-fluid" alt="Error Loading Image" width="400" oading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">DINE WITH US!</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit non reiciendis sed vitae. Enim iste libero optio quidem quo?</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="shadow btn btn-warning btn-lg px-5 me-md-2" id="contact-button">Contact Us!</button>
+        </div>
+      </div>
+    </div>
+</div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div id="trigger1"></div>
+<div id="reveal1"><a href="" id="menu"></a>
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5 container-fluid">
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">TRY OUR FRIED CHICKEN!</h1>
+      <p class="lead">Taste our juicy, crispy and tender fried chicken coated with our own seasoning since 1998 </p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-outline-warning btn-lg px-4">Check Our Menu!</button>
+      </div>
+    </div>
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="{% static 'img/chicken5.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+  </div>
+</div>
+<div id="trigger2"></div><a id="promo"></a>
+<div class="px-4 pt-5 my-5 text-center border-bottom" id="reveal2">
+    <h1 class="display-4 fw-bold">FOLLOW US ON INSTAGRAM</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Don't miss your chance to get the best deals! We provide promo every week, Follow us to stay notified!</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <a class="btn btn-outline-warning btn-lg px-4 me-sm-3" href="https://instagram.com/metrofchicken/"><i class="bi bi-instagram"></i> @metrofriedchicken</a>
+      </div>
+    </div>
+    <div>
+      <div class="container px-5">
+{#        <img src="{% static 'img/metroinsta.png' %}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Error Loading Message" width="700" height="500" loading="lazy">#}
+      </div>
+    </div>
+
+
+<div class="embedsocial-hashtag h-75 w-75 container" data-ref="5cca560699379386c420cc941a93ee30c0293798" id="promo"></div>
+<script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialHashtagScript"));</script>
+</div>
+<div id="trigger3"></div><a id="about"></a>
+<div id="reveal3">
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static 'img/metroabout.png' %}" class="d-block mx-lg-auto img-fluid" alt="Error Loading Image" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6" id="promo">
+            <h1 class="display-5 fw-bold lh-1 mb-3">About Us</h1>
+            <p class="lead">"Metro Fried Chicken" bergerak di bidang restoran dengan konsep restoran fastfood dan sudah beroperasi sejak 1998. Menu andalan kami adalah Fried Chicken yang renyah dan garing dengan bumbu rahasia yang tentunya akan menggugah selera anda, selain Itu Metro Fried Chlcken menyedlakan Burger, French Fries, Spaghetty, Drinks, Dessert & yang paling terlaris Saat ini Chicken Steak dengan cita rasa premium.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-outline-warning btn-lg px-4">Learn More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container jumbotron border bg-light rounded-3" style="--bs-bg-opacity: 0.5"><a href="" id="contact"></a>
+<p class="fs-1 pt-3 ps-3">Contact Us</p>
+    <form class="align-items-center ps-3 form-floating mb-5" active="https://formspree.io/f/xknklvoj" METHOD="POST">
+        {% csrf_token %}
+      <div class="row d-flex justify-content-center text-center ">
+        <div class="col">
+            <input type="text" id="input-name" placeholder="Name" class="form-control" name="_replyto">
+            <input type="email" id="input-email" placeholder="Email address" class="form-control" name="message">
+            <input type="text" id="input-subject" placeholder="Subject" class="form-control">
+        </div>
+          <div class=" col">
+            <textarea name="message" type="text" id="input-message" placeholder="Leave message here" class="form-control" style="height:100px"></textarea>
+          </div>
+      </div>
+      <input type="submit" value="Send to admin@metrofriedchicken.com" id="input-submit" class="btn btn-lg w-100 btn-outline-warning">
+    </form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var controller = new ScrollMagic.Controller();
+
+  new ScrollMagic.Scene({
+      triggerElement: "#trigger1",
+      triggerHook: 0.75, // show, when scrolled 10% into view
+      duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+ })
+      .setClassToggle("#reveal1", "visible")
+      .addIndicators()
+      .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: "#trigger2",
+  triggerHook: 0.75, // show, when scrolled 10% into view
+  duration: "280%", // hide 10% before exiting view (80% + 10% from bottom)
+  offset: 50 // move trigger to center of element
+})
+  .setClassToggle("#reveal2", "visible")
+  .addIndicators()
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: "#trigger3",
+  triggerHook: 0.75, // show, when scrolled 10% into view
+  duration: '0%', // hide 10% before exiting view (80% + 10% from bottom)
+  offset: 50 // move trigger to center of element
+})
+  .setClassToggle("#reveal3", "visible")
+  .addIndicators()
+  .addTo(controller);
+
+
+</script>
+
+
+
+<script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+
+{% endblock %}
